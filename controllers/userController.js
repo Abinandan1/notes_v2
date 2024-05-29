@@ -4,10 +4,7 @@ import noteModel from "../models/noteModel.js";
 import cloudinary from "cloudinary";
 import fs from "fs";
 import { BadRequestError } from "../errors/customError.js";
-import Mailgun from "mailgun-js";
-import formData from "form-data";
 import { randomOTPGenerator } from "../utils/randomOTPGenerator.js";
-import { sendEmail } from "../utils/sendEmail.js";
 
 export const getCurrentUser = async (req, res) => {
   const user = await userModel.findById(req.user.userId);

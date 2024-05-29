@@ -1,11 +1,10 @@
 import {
-  Form,
   useActionData,
   useLoaderData,
   useNavigate,
   useSubmit,
 } from "react-router-dom";
-import { FormRow, Logo, SubmitBtn } from "../components";
+import { Logo } from "../components";
 import { Wrapper } from "../wrappers/VerifyEmail";
 import { toast } from "react-toastify";
 import { customFetch } from "../utils/customFetch";

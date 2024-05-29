@@ -1,4 +1,3 @@
-import Mailgun from "mailgun-js";
 import nodemailer from "nodemailer";
 export const sendEmail = async ({ from, to, subject, text, html }) => {
   const transporter = nodemailer.createTransport({
@@ -24,17 +23,3 @@ export const sendEmail = async ({ from, to, subject, text, html }) => {
 
   return transporter.sendMail(mailOptions);
 };
-// export const sendEmail = async ({ from, to, subject, text, html }) => {
-//   const mailgun = new Mailgun({
-//     apiKey: process.env.MAILGUN_API_KEY,
-//     // domain: "sandbox-123.mailgun.org",
-//     domain: process.env.MAILGUN_DOMAIN,
-//   });
-//   return mailgun.messages().send({
-//     from: from || "abinandan2018@gmail.com",
-//     to: [to],
-//     subject,
-//     text,
-//     html,
-//   });
-// };

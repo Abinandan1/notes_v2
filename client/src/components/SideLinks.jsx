@@ -3,7 +3,6 @@ import { BiSolidArchiveIn, BiSolidUserRectangle } from "react-icons/bi";
 import { BsTrash3 } from "react-icons/bs";
 import { FaHome } from "react-icons/fa";
 import { GiNotebook } from "react-icons/gi";
-import { NavLink } from "react-router-dom";
 import SideLink from "./SideLink";
 
 const SideLinks = () => {
