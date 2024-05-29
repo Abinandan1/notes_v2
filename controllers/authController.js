@@ -66,7 +66,7 @@ export const register = async (req, res) => {
     name: user.name,
     email: user.email,
     verificationToken: user.verificationToken,
-    origin: "http://localhost:5173/",
+    origin: "https://notes-v2.onrender.com/",
   });
   res.status(StatusCodes.CREATED).json({
     msg: "success! please check your email to verify account",
@@ -114,7 +114,7 @@ export const forgotPassword = async (req, res) => {
       name: user.name,
       email: user.email,
       passwordToken: user.passwordToken,
-      origin: "http://localhost:5173/",
+      origin: "https://notes-v2.onrender.com/",
     });
   }
   res
