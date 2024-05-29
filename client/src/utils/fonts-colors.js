@@ -1,0 +1,31 @@
+export const colors = [
+  "var(--bg-secondary-color)",
+  "#fda4af",
+  "#f9a8d4",
+  "#d8b4fe",
+  "#a5b4fc",
+  "#93c5fd",
+  "#7dd3fc",
+  "#67e8f9",
+  "#5eead4",
+  "#fca5a5",
+  "#fdba74",
+  "#fcd34d",
+  "#fde047",
+  "#bef264",
+  "#86efac",
+  "#6ee7b7",
+];
+
+export const fonts = [
+  "Roboto",
+  "Open Sans",
+  "Lato",
+  "Montserrat",
+  "Oswald",
+  "Source Sans 3",
+  "Slabo",
+  "Raleway",
+  "PT Sans",
+  "Merriweather",
+];
