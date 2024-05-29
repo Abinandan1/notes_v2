@@ -12,7 +12,8 @@ import { authenticateUser } from "./middleware/authMiddleware.js";
 import userRouter from "./routers/userRouter.js";
 import expressFileUpload from "express-fileupload";
 import cloudinary from "cloudinary";
-import path from "path";
+import path, { dirname } from "path";
+import { fileURLToPath } from "url";
 
 dotenv.config();
 const app = express();
@@ -21,7 +22,8 @@ const app = express();
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
-app.use(express.static("./public"));
+const __dirname = dirname(fileURLToPath(import.meta.url));
+app.use(express.static(path.resolve(__dirname, "./public")));
 app.use(express.json());
 app.use(cookieParser(process.env.JWT_SECRET));
 app.use(morgan("dev"));
