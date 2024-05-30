@@ -90,7 +90,7 @@ html {
 }
 
 /* DARK MODE */
-.dark-mode {
+.dark-theme {
   --bg-color: var(--dark-mode-bg-color);
   --text-color: var(--dark-mode-text-color);
   --bg-secondary-color: var(--dark-mode-bg-secondary-color);

@@ -42,12 +42,12 @@ const DashboardLayout = ({ isDarkTheme }) => {
   };
   const toggleTheme = () => {
     setTheme(!theme);
-    document.body.classList.toggle("dark-mode", !theme);
+    document.body.classList.toggle("dark-theme", !theme);
     localStorage.setItem("theme", !theme);
   };
 
   useEffect(() => {
-    document.body.classList.toggle("dark-mode", theme);
+    document.body.classList.toggle("dark-theme", theme);
   }, []);
   return (
     <DashboardContext.Provider
