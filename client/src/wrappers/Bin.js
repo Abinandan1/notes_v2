@@ -4,6 +4,9 @@ const Wrapper = styled.div`
     width: clamp(70%, 5vw, 90%);
     margin: 0 auto;
   }
+  .info {
+    font-style: italic;
+  }
   h4 {
     margin-bottom: 1rem;
   }
