@@ -33,6 +33,9 @@ const Bin = () => {
           setOptions={setOptions}
           setView={setView}
         />
+        <p className="info">
+          Notes present in Bin will be deleted permanently after 30 days.
+        </p>
         <div className="deleted">
           <h4>deleted</h4>
           <NotesGridList
