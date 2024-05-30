@@ -18758,6 +18758,8 @@ const s0 = ({ view: e, setView: t }) =>
   .info {
     font-style: italic;
     text-align: center;
+    margin-bottom: 1.5rem;
+    opacity:0.8;
   }
   h4 {
     margin-bottom: 1rem;

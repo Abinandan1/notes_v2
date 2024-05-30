@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   .info {
     font-style: italic;
     text-align: center;
+    margin-bottom: 1.5rem;
   }
   h4 {
     margin-bottom: 1rem;
