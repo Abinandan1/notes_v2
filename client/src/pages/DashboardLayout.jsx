@@ -22,14 +22,14 @@ export const loader = async () => {
 };
 
 const DashboardContext = createContext();
-const getThemeFromLocalStorage = () => {
-  const theme = JSON.parse(localStorage.getItem("theme")) || false;
-  return theme;
-};
-const DashboardLayout = () => {
+// const getThemeFromLocalStorage = () => {
+//   const theme = JSON.parse(localStorage.getItem("theme")) || false;
+//   return theme;
+// };
+const DashboardLayout = ({ isDarkTheme }) => {
   const [showSidebar, setShowSidebar] = useState(false);
   const [profile, setProfile] = useState(false);
-  const [theme, setTheme] = useState(getThemeFromLocalStorage());
+  const [theme, setTheme] = useState(isDarkTheme);
   const { user } = useLoaderData();
   const navigate = useNavigate();
   const paths = useLocation().pathname.split("/");

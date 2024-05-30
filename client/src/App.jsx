@@ -43,11 +43,11 @@ import { action as forgotPasswordAction } from "./pages/ForgotPassword";
 import HomeLanding from "./pages/HomeLanding";
 
 export const getThemeFromLocalStorage = () => {
-  const isDarkTheme = localStorage.getItem("theme") === "true";
+  const isDarkTheme = JSON.parse(localStorage.getItem("theme")) === true;
   document.body.classList.toggle("dark-theme", isDarkTheme);
   return isDarkTheme;
 };
-getThemeFromLocalStorage();
+const isDarkTheme = getThemeFromLocalStorage();
 const router = createBrowserRouter([
   {
     path: "/",
@@ -70,7 +70,7 @@ const router = createBrowserRouter([
       },
       {
         path: "dashboard",
-        element: <DashboardLayout />,
+        element: <DashboardLayout isDarkTheme={isDarkTheme} />,
         loader: dashboardLoader,
         children: [
           {
