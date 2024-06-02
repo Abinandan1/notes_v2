@@ -4,6 +4,7 @@ import {
   useLoaderData,
   useLocation,
   useNavigate,
+  useNavigation,
 } from "react-router-dom";
 import Wrapper from "../wrappers/DashboardLayout";
 import { BigSidebar, Navbar, SmallSidebar } from "../components";
@@ -30,6 +31,8 @@ const DashboardLayout = ({ isDarkTheme }) => {
   const [showSidebar, setShowSidebar] = useState(false);
   const [profile, setProfile] = useState(false);
   const [theme, setTheme] = useState(isDarkTheme);
+  const navigation = useNavigation();
+  const isLoading = navigation.state === "loading";
   const { user } = useLoaderData();
   const navigate = useNavigate();
   const paths = useLocation().pathname.split("/");
@@ -69,7 +72,7 @@ const DashboardLayout = ({ isDarkTheme }) => {
           <div>
             <Navbar />
             <div className="dashboard-page">
-              <Outlet />
+              {isLoading ? <div className="loading"></div> : <Outlet />}
             </div>
           </div>
         </div>
