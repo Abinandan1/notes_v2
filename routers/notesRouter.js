@@ -9,9 +9,7 @@ import {
 import {
   validateIdParam,
   validateNoteInput,
-  validationMiddleware,
 } from "../middleware/validationMiddleware.js";
-import { body } from "express-validator";
 
 const router = Router();
 
